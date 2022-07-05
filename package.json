@@ -1,0 +1,24 @@
+{
+	"name": "genshin-zone-bot",
+	"version": "1.0.0",
+	"description": "An Official GenshinZone Indonesia Discord Bot",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Paiz#5599",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^4.1.1",
+		"discord.js": "^13.8.1",
+		"dotenv": "^16.0.0",
+		"ejs": "^3.1.8",
+		"express": "^4.18.1",
+		"glob": "^7.2.0",
+		"moment": "^2.29.2",
+		"mongoose": "^5.13.10",
+		"ms": "^2.1.3",
+		"node-fetch": "^2.6.7"
+	}
+}
