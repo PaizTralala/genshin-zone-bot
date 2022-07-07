@@ -9,6 +9,6 @@
 - [ ] Auto Role/Self role system (buttons)
 - [ ] Welcome system
 - [ ] Language system
-- [ ] Ticket system
+- [x] Ticket system
 - [ ] Configuration to handle all of the utilities system above (enabling, disabling, etc.)
 - [ ] Music system (erela.js)
