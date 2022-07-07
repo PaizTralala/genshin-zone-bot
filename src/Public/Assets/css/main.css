@@ -1,0 +1,222 @@
+@font-face {
+	font-family: 'Araboto Normal';
+	src: url(../fonts/Araboto\ Normal\ 400.ttf);
+}
+
+@font-face {
+	font-family: 'Gothic';
+	src: url(../fonts/GOTHICB0.TTF);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	width: 11px;
+}
+body::-webkit-scrollbar-track {
+	background: #2a2a3a;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	border-radius: 6px;
+	border: 3px solid #2a2a3a;
+}
+
+.main-button-container {
+	display: inline;
+}
+
+.main-button {
+	display: table-cell;
+	width: 50%;
+
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 0;
+}
+
+.main-button button {
+	width: 100%;
+	cursor: pointer;
+
+	transition: ease-in-out 200ms;
+
+	background-color: #5865f2;
+	color: #dcddd9;
+	font-family: open-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+	border: none;
+	border-radius: 12px;
+
+	padding: 13px;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+.fa-brands {
+	font-size: 15px;
+}
+
+.main-button i {
+	size: 40px;
+}
+
+.button-link {
+	text-decoration: none;
+}
+
+.main-page {
+	width: auto;
+
+	background: rgba(61, 58, 66, 0.8) url('../images/Background.png');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.main-container {
+	display: flex;
+
+	height: 100vh;
+	width: auto;
+}
+
+.main-description {
+	padding-top: 40vh;
+	margin-left: 50px;
+
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.fade-in-text h1 {
+	animation: fadeIn 3s;
+}
+
+.fade-in-text p {
+	animation: fadeIn 6s;
+}
+
+.main-description p {
+	margin-top: 0;
+	margin-bottom: 15px;
+
+	color: #dcddd9;
+	font-family: open-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.main-description h1 {
+	margin: 0;
+}
+
+svg {
+	vertical-align: middle;
+}
+
+.content-container {
+	height: 100vh;
+	background-color: #2a2a3a;
+}
+
+.content-container #title {
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+	text-decoration: underline;
+	text-underline-offset: 10px;
+
+	margin: 0;
+	align-items: center;
+	text-align: center;
+}
+
+.ticket-container {
+	display: flex;
+
+	margin: 100px 50px 50px 50px;
+}
+
+.ticket-image {
+	border-radius: 30px;
+	margin: 25px;
+}
+
+.ticket-description h1 {
+	margin-top: 50px;
+	margin-bottom: 0;
+	/* margin: 0; */
+
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.ticket-description p {
+	margin-top: 0;
+
+	color: #dcddd9;
+	font-family: open-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.ticket-description {
+	margin: 25px;
+}
+
+.feature-content {
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#bot-image {
+	margin-top: 30vh;
+	margin-left: 250px;
+
+	width: 300px;
+
+	animation: floating 3s infinite ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+	.main-container img {
+		display: none;
+	}
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, 15px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

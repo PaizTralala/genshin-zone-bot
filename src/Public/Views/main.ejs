@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://use.typekit.net/nmo5xwe.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+		<link rel="icon" href="<%= client.user.displayAvatarURL() %>" />
+
+		<title><%=client.user.username%> - Main Page</title>
+	</head>
+	<body>
+		<div class="main-page">
+			<div class="main-container">
+				<img id="bot-image" width="200" height="300" src="images/ImageLogo.png" alt="<%= client.user.username %> profile" />
+
+				<div class="main-description">
+					<!-- <h1 id="bot-uname"><%= client.user.username %></h1> -->
+
+					<div class="fade-in-text">
+						<h1>GenshinZone ID</h1>
+					</div>
+					<div class="fade-in-text">
+						<p>A perfectly made Discord bot for GenshinZone Discord server.</p>
+					</div>
+
+					<div class="main-button-container">
+						<div class="main-button">
+							<a href="https://github.com/PaizTralala/genshin-zone-bot" target="_blank" class="button-link">
+								<button>
+									<!-- <i class="fa-brands fa-github"></i>  -->
+									Github
+								</button>
+							</a>
+						</div>
+
+						<div class="main-button">
+							<a href="https://discord.gg/AyjH2SE6pB" target="_blank" class="button-link">
+								<button>
+									<!-- <i class="fa-brands fa-discord"></i> -->
+									Discord Server
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" style="background-color: #2a2a3a">
+			<path
+				fill="#F4947C"
+				fill-opacity="1"
+				d="M0,128L48,122.7C96,117,192,107,288,96C384,85,480,75,576,85.3C672,96,768,128,864,122.7C960,117,1056,75,1152,74.7C1248,75,1344,117,1392,138.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+			></path>
+		</svg>
+
+		<div class="content-container">
+			<h1 id="title">Main Features</h1>
+
+			<div class="ticket-container">
+				<div data-aos="fade-right" data-aos-duration="1000">
+					<img
+						class="ticket-image"
+						src="https://cdn.discordapp.com/attachments/990601609597841468/994518825095680030/unknown.png"
+						alt="ticket system image"
+					/>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="2000">
+					<div class="ticket-description">
+						<h1>Ticket System!</h1>
+						<p>In GenshinZone Indonesia, we have our own ticket system!</p>
+					</div>
+				</div>
+			</div>
+
+			<marquee class="feature-content" scrollamount="20">
+				<h1>More feature are coming soon!</h1>
+			</marquee>
+		</div>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/e622039ad4.js" crossorigin="anonymous"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
+</html>
