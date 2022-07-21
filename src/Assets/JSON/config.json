@@ -1,0 +1,18 @@
+{
+	"development": true,
+	"client": {
+		"prefix": "PREFIX",
+		"owners": [],
+		"devGuild": ""
+	},
+	"defaultPerms": ["SEND_MESSAGES", "VIEW_CHANNEL"],
+	"color": {
+		"invis": "#2F3136",
+		"cream": "#FEF3E6"
+	},
+	"links": {
+		"botInvite": "",
+		"supportInvite": "",
+		"saweria": ""
+	}
+}

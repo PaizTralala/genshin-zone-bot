@@ -11,6 +11,8 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #2a2a3a;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -83,12 +85,14 @@ button:hover {
 .main-container {
 	display: flex;
 
+	align-items: center;
+	justify-content: center;
+
 	height: 100vh;
 	width: auto;
 }
 
 .main-description {
-	padding-top: 40vh;
 	margin-left: 50px;
 
 	color: white;
@@ -123,12 +127,40 @@ svg {
 	vertical-align: middle;
 }
 
+.client-stats {
+	display: flex;
+	justify-content: space-evenly;
+
+	color: white;
+}
+
+.guild-stats,
+.user-stats {
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 12px;
+
+	text-align: center;
+
+	background-color: #191925;
+	box-shadow: 0px 0px 90px 3px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 90px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 90px 3px rgba(0, 0, 0, 0.75);
+
+	padding-left: 50px;
+	padding-right: 50px;
+
+	border-radius: 40px;
+}
+
 .content-container {
 	height: 100vh;
 	background-color: #2a2a3a;
 }
 
-.content-container #title {
+#title {
 	color: white;
 	font-family: open-sans, sans-serif;
 	font-weight: 700;
@@ -137,15 +169,18 @@ svg {
 	text-decoration: underline;
 	text-underline-offset: 10px;
 
-	margin: 0;
 	align-items: center;
 	text-align: center;
+
+	margin: 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .ticket-container {
 	display: flex;
 
-	margin: 100px 50px 50px 50px;
+	justify-content: center;
 }
 
 .ticket-image {
@@ -156,7 +191,6 @@ svg {
 .ticket-description h1 {
 	margin-top: 50px;
 	margin-bottom: 0;
-	/* margin: 0; */
 
 	color: white;
 	font-family: open-sans, sans-serif;
@@ -186,9 +220,6 @@ svg {
 }
 
 #bot-image {
-	margin-top: 30vh;
-	margin-left: 250px;
-
 	width: 300px;
 
 	animation: floating 3s infinite ease-in-out;
@@ -197,6 +228,41 @@ svg {
 @media screen and (max-width: 1000px) {
 	.main-container img {
 		display: none;
+	}
+
+	.ticket-container {
+		flex-direction: column-reverse;
+
+		font-size: 12px;
+		margin: 40px;
+	}
+
+	.ticket-container img {
+		width: 100%;
+	}
+
+	.ticket-description p {
+		margin-bottom: 40px;
+	}
+
+	.ticket-description,
+	.ticket-image {
+		margin: 0;
+	}
+
+	.client-stats {
+		flex-direction: column;
+	}
+
+	.guild-stats,
+	.user-stats {
+		font-size: 10px;
+		margin: 40px;
+		padding: 0;
+	}
+
+	#title {
+		font-size: 20px;
 	}
 }
 

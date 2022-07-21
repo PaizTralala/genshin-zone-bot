@@ -1,0 +1,70 @@
+body {
+	background-color: #2a2a3a;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid white;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: white;
+}
+
+tr:nth-child(odd) {
+	background-color: aqua;
+}
+
+.client-count {
+	display: flex;
+
+	justify-content: center;
+}
+
+#guild-count,
+#users-count {
+	margin: 30px;
+}
+body {
+	background-color: #2a2a3a;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid white;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: white;
+}
+
+tr:nth-child(odd) {
+	background-color: aqua;
+}
+
+.client-count {
+	display: flex;
+
+	justify-content: center;
+}
+
+#guild-count,
+#users-count {
+	margin: 30px;
+}

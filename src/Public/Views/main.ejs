@@ -5,6 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://use.typekit.net/nmo5xwe.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -50,6 +53,7 @@
 				</div>
 			</div>
 		</div>
+
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" style="background-color: #2a2a3a">
 			<path
 				fill="#F4947C"
@@ -58,6 +62,20 @@
 			></path>
 		</svg>
 
+		<div class="client-stats">
+			<% let guildSize = client.guilds.cache.size %> <% let userSize = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);%>
+
+			<div class="guild-stats">
+				<h1>Guild Count</h1>
+				<h1 id="guild-count">0</h1>
+			</div>
+
+			<div class="user-stats">
+				<h1>User Count</h1>
+				<h1 id="user-count">0</h1>
+			</div>
+		</div>
+
 		<div class="content-container">
 			<h1 id="title">Main Features</h1>
 
@@ -65,28 +83,56 @@
 				<div data-aos="fade-right" data-aos-duration="1000">
 					<img
 						class="ticket-image"
-						src="https://cdn.discordapp.com/attachments/990601609597841468/994518825095680030/unknown.png"
+						src="https://cdn.discordapp.com/attachments/938061902662213644/996833622680154253/unknown.png"
 						alt="ticket system image"
 					/>
 				</div>
 
-				<div data-aos="fade-left" data-aos-duration="2000">
+				<div data-aos="fade-left" data-aos-duration="1500">
 					<div class="ticket-description">
 						<h1>Ticket System!</h1>
-						<p>In GenshinZone Indonesia, we have our own ticket system!</p>
+						<p>In GenshinZone Indonesia, we have our own built in ticket system!</p>
 					</div>
 				</div>
 			</div>
 
-			<marquee class="feature-content" scrollamount="20">
-				<h1>More feature are coming soon!</h1>
-			</marquee>
+			<div class="ticket-description">
+				<h1 style="text-align: center"><a href="/commands" style="color: inherit; text-decoration: none">Command list</a></h1>
+			</div>
 		</div>
 
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="https://kit.fontawesome.com/e622039ad4.js" crossorigin="anonymous"></script>
+
 		<script>
 			AOS.init();
+
+			function animateValue(obj, start, end, duration) {
+				let startTimestamp = null;
+				const step = (timestamp) => {
+					if (!startTimestamp) startTimestamp = timestamp;
+					const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+					obj.innerHTML = Math.floor(progress * (end - start) + start);
+					if (progress < 1) {
+						window.requestAnimationFrame(step);
+					}
+				};
+				window.requestAnimationFrame(step);
+			}
+
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const guildCount = document.getElementById('guild-count');
+						const userCount = document.getElementById('user-count');
+
+						animateValue(guildCount, 0, <%= guildSize %>, 800);
+						animateValue(userCount, 0, <%= userSize %>, 800);
+					}
+				})
+			});
+
+			observer.observe(document.getElementById('user-count'))
 		</script>
 	</body>
 </html>

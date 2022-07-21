@@ -67,9 +67,10 @@ module.exports = class MainClient extends Client {
 
 	async start(token = this.token) {
 		this.utils.loadEvents();
-		// Start web server
-		require('./Server').webApp(this);
 
 		await super.login(token);
+
+		// * Start the web server
+		require('./Server').webApp(this);
 	}
 };

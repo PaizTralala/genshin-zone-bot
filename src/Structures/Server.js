@@ -14,6 +14,10 @@ const webApp = (client) => {
 		res.render('main', { client: client });
 	});
 
+	app.get('/commands', (req, res) => {
+		res.render('pages/commands', { client: client });
+	});
+
 	app.listen(PORT, () => {
 		client.logger.ready(`Web server is initialised and listening on port ${PORT}`);
 	});
